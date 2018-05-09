@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BANMYPHAM" Class="QuanLyMyPhamDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=THANHCONG-PC;Initial Catalog=BANMYPHAM;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BANMYPHAMConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Account" Member="Accounts">
+    <Type Name="Account">
+      <Column Name="TenTaiKhoan" Type="System.String" DbType="Char(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MatHang" Member="MatHangs">
+    <Type Name="MatHang">
+      <Column Name="MaMatHang" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenMatHang" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="AnhMatHang" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ChiTietMatHang" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="GiaMatHang" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MaTheLoai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TheLoai_MatHang" Member="TheLoai" ThisKey="MaTheLoai" OtherKey="MaTheLoai" Type="TheLoai" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TheLoai" Member="TheLoais">
+    <Type Name="TheLoai">
+      <Column Name="MaTheLoai" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenTheLoai" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="TheLoai_MatHang" Member="MatHangs" ThisKey="MaTheLoai" OtherKey="MaTheLoai" Type="MatHang" />
+    </Type>
+  </Table>
+</Database>
