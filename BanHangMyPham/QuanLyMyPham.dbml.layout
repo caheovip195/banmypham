@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QuanLyMyPham">
+  <DataContextMoniker Name="/QuanLyMyPhamDataContext" />
+  <nestedChildShapes>
+    <classShape Id="358fe08d-f7ce-467f-81e4-11a8fabffaa2" absoluteBounds="0.75, 3.75, 2, 1.193992513020834">
+      <DataClassMoniker Name="/QuanLyMyPhamDataContext/Account" />
+      <nestedChildShapes>
+        <elementListCompartment Id="001d5448-1551-491a-af8d-d3c03b594713" absoluteBounds="0.765, 4.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9c3f1216-4b61-4020-8d06-3333e1cba655" absoluteBounds="6.125, 1.25, 2, 1.9631982421874998">
+      <DataClassMoniker Name="/QuanLyMyPhamDataContext/MatHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="99ca84ed-e51d-484c-a722-56ddd597bf27" absoluteBounds="6.14, 1.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7d970b2c-f6fe-4d8e-aa6f-04f6fea21fce" absoluteBounds="3.375, 1.625, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/QuanLyMyPhamDataContext/TheLoai" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6360c88a-da20-4a68-95cf-9ccd6212ed34" absoluteBounds="3.39, 2.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 2.22199625651042); (6.125 : 2.22199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanLyMyPhamDataContext/TheLoai/TheLoai_MatHang" />
+      <nodes>
+        <classShapeMoniker Id="7d970b2c-f6fe-4d8e-aa6f-04f6fea21fce" />
+        <classShapeMoniker Id="9c3f1216-4b61-4020-8d06-3333e1cba655" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
